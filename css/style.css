@@ -33,11 +33,20 @@ header {
     position: fixed;
     background-color: #222831;
     color: #eeeeee;
-    z-index: 3;
+    z-index: 4;
+    transition: all 0.5s;
 }
 
-header .fa-bars {
+#mobile-sub-menu {
+    opacity: 0;
     display: none;
+}
+
+#bars, #times {
+    display: none;
+    opacity: 0;
+    position: absolute;
+    right: 1em;
 }
 
 header a {
@@ -55,7 +64,7 @@ header section ul {
     list-style-type: none;
 }
 
-header ul li {
+#web-nav li {
     transition: all 0.2s;
     margin-left: 20px;
     font-size: 14px;
@@ -83,23 +92,33 @@ section#about-section {
 
 #about h3 {
     font-size: 25px;
+    transition: all 0.5s;
+}
+
+#about h3, #about h5 {
+    transition: all 0.5s;
 }
 
 #about-text {
-    height: 300px;
-    /* text-align: center; */
+    height: 150px;
     padding-top: 100px;
     transition: all 0.5s;
     margin-left: 1em;
 }
 
+#about-menus {
+    margin-top: 10px;
+    height: 150px;
+    transition: all 0.5s;
+}
+
 nav {
     position: relative;
-    /* background: blue; */
 }
 
 nav ul {
     list-style-type: none;
+    margin-left: 10px;
 }
 
 nav ul li {
@@ -141,10 +160,11 @@ nav ul li.menu-active:hover {
     flex-direction: column;
     background-color: #393e46;
     padding: 1% 2%;
-    width: 400px;
+    max-width: 320px;
     height: 220px;
     position: relative;
     justify-content: space-around;
+    /* border-radius: 10px; */
 }
 
 .sub-menu ul li {
@@ -156,11 +176,12 @@ nav ul li.menu-active:hover {
 
 #exit-menu {
     position: absolute;
-    top: 38%;
-    left: 390px;
+    top: 105%;
+    left: 300px;
+    /* left: 42%; */
     font-size: 20px;
     pointer-events: all;
-    z-index: 2;
+    z-index: 3;
     color: #eeeeee;
     opacity: 0;
     transition: all 0.2s;
@@ -169,7 +190,6 @@ nav ul li.menu-active:hover {
 #exit-menu:hover {
     cursor: pointer;
 }
-
 
 section#slider-section {
     overflow: hidden;
@@ -421,13 +441,13 @@ section#contact-section {
 }
 
 #contact ul li i{
-    margin-right: 5px;
-    margin-left: 15px;
     font-size: 20px;
 }
 
-#contact ul li {
+#contact ul li p { 
     font-size: 15px;
+    margin-right: 5px;
+    margin-left: 15px;
 }
 
 #contact ul a {
@@ -439,13 +459,59 @@ section#contact-section {
     cursor: pointer;
 }
 
-/* @media (max-width: 500px) {
-    header .fa-bars {
-        display: block;
-        margin-right: 1em;
+@media (max-width: 500px) {
+    section {
+        width: 100%;
     }
 
-    header ul li {
+    #bars {
+        opacity: 1;
+    }
+
+    #bars, #times {
+        transition: all 0.5s;
+        display: block;
+    }
+
+    #web-nav li {
         display: none;
     }
-} */
+
+    #mobile-sub-menu {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        right: 0;
+        top: 60px;
+        background-color: #222831;
+        color: #eeeeee;
+        width: 100px;
+        transition: all 0.5s;
+        z-index: 1;
+        pointer-events: none;
+    }
+    
+    #mobile-sub-menu li{
+        transition: all 0.5s;
+        margin: 10px;
+    }
+
+    #contact ul {
+        margin: 20px 10px;
+    }
+
+    #contact ul li i{
+        font-size: 14px;
+    }
+
+    #contact ul li p {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 400px) {
+    #exit-menu {
+        left: 0;
+        right: 1em;
+    }
+}
