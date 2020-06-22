@@ -1,0 +1,180 @@
+<html>
+    <head>
+        <title>Azmin Massoumi</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
+            
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <div id="container">
+            <header>
+                <section id="head">
+                    <div>
+                        <img src="" alt="">
+                        <h1>Azmin Massoumi</h1>
+                        <h5>Software Engineer (Machine Learning)</h5>
+                    </div>
+                        <ul>
+                            <li><a href="#about">about me</a> </li>
+                            <li><a href="#work">work</a></li>
+                            <li><a href="#contact">contact</a></li>
+                        </ul>
+                </section>
+            </header>
+
+            <div id="about">
+                <section id="about-section">
+
+                    <i class="fa fa-times" aria-hidden="true" onclick="hideSubMenu()" id="exit-menu"></i>
+                    <div id="about-text">
+                        <h3>Azmin Massoumi</h3>
+                        <h5>Kuala Lumpur, Malaysia</h5>
+
+                        <div id="about-menus">
+                            <nav>
+                                <ul>
+                                    <li onclick="showSubMenu('interests')" id="interests-menu" class="menu-heading">Interests
+                                        <div class="sub-menu" id="interests">
+                                            
+                                            <ul>
+                                                <li>Software Engineering</li>
+                                                <li>Data Science and Data Analytics</li>
+                                                <li>Music</li>
+                                                <li>Football (Glory Glory Man United)</li>
+                                                <li>Sports and Exercise</li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li onclick="showSubMenu('education')" id="education-menu" class="menu-heading">Education
+                                        <div class="sub-menu" id="education">
+                                            <ul>
+                                                <li>A-Levels, HELP International School</li>
+                                                <li>B.S. Mathematics-Computer Science, University of California San Diego</li>
+                                                <li>UCEAP Exchange Program, Lund University, Sweden</li>
+                                                <li>IBM Professional Data Science Certification</li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li onclick="showSubMenu('languages')" id="languages-menu" class="menu-heading">Languages
+                                        <div class="sub-menu" id="languages">
+                                            <ul>
+                                                <li>Python</li>
+                                                <li>HTML</li>
+                                                <li>CSS</li>
+                                                <li>JavaScript</li>
+                                                <hr>
+                                                <li>English</li>
+                                                <li>Malay</li>
+                                                <li>Spanish</li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="slider-section">
+                    <div id="slider">
+                        <div class="slider-item first">
+                            <h4>grew up in Kuala Lumpur, Malaysia</h4>
+                        </div>
+                        <div class="slider-item second">
+                            <h4>studied in San Diego, California</h4>
+                        </div>
+                        <div class="slider-item third">
+                            <h4>spent 6 months on exchange in Lund, Sweden</h4>
+                        </div>
+                    </div>
+
+                    <div class="btn right" onclick="slideChange(-100)">&gt;</div>
+                    <div class="btn left" onclick="slideChange(100)">&lt;</div>
+
+                    <div id="quick-bar">
+                        <div class="quick-nav nav-active" onclick="jumpSlide(0)"></div>
+                        <div class="quick-nav" onclick="jumpSlide(-100)"></div>
+                        <div class="quick-nav" onclick="jumpSlide(-200)"></div>
+                    </div>
+                </section>
+            </div>
+            
+            <div id="work">
+                <section id="work-section">
+                    <!-- <hr> -->
+                    <h2>Work</h2>
+                    <h3>experience</h3>
+                    <div id="experience">
+
+                        <div class="experience-item">
+                            <h5>Invoke</h5>
+                            <p>Jan 2020 - Present</p>
+                            <p>Software Engineer (Machine Learning)</p>
+                        </div>
+                        <div class="experience-item">
+                            <h5>Accenture</h5>
+                            <p>Jul 2018 - Sep 2018</p>
+                            <p>Campaign Management System Intern</p>
+                        </div>
+                        <div class="experience-item">
+                            <h5>Mesiniaga</h5>
+                            <p>Jul 2017 - Aug 2017</p>
+                            <p>Network Business Unit Intern</p>
+                        </div>
+                    </div>
+
+                    <hr id="work-hr">
+
+                    <h3>projects</h3>
+                    <div id="projects">
+                        <div class="project-item">
+                            <div class="project-image">
+                                <img src="images/salammbo.png" alt="salammbo" id="salammbo">
+                            </div>
+                            <div class="project-text">
+                                <h4>Machine Learning on Salammbo</h4>
+                                <p>Built and implemented linear and logistic regression models to test on datasets corresponding to letter counts in French and English versions of the 'Salammbo' novel</p>
+                            </div>
+                        </div>
+                        <div class="project-item">
+                            <div class="project-image">
+                                <img src="images/reversi.png" alt="reversi">
+                            </div>
+                            <div class="project-text">
+                                <h4>Reversi AI</h4>
+                                <p>Created a command-line implementation of the Reversi board game, with built in AI to enable gameplay between user and program, with differing difficulties.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div id="contact">
+                <section id="contact-section">
+                    <h2>Contact Me</h2>
+
+                    <div id="contact-form">
+                        <div id="name-email">
+                            <input type="text" placeholder="Name" id="name">
+                            <input type="email" placeholder="Email" id="email">
+                        </div>
+                        <input type="text" placeholder="Message" id="message">
+                    </div>
+                    <ul>
+                        <a href="mailto:azmin.massoumi@gmail.com"><li><i class="fa fa-envelope-o" aria-hidden="true"></i> azmin.massoumi@gmail.com</li></a>
+                        <a href="https://www.linkedin.com/in/azmin.massoumi"><li><i class="fa fa-linkedin" aria-hidden="true"></i>azmin.massoumi</li></a>
+                        <a href="https://www.instagram.com"><li><i class="fa fa-instagram" aria-hidden="true"></i>azminmassoumi</li></a>
+                    </ul>
+                    <ul>
+                        <a href="https://www.github.com/aamassou"><li><i class="fa fa-github" aria-hidden="true"></i>aamassou</li></a>
+                        <li><i class="fa fa-whatsapp" aria-hidden="true"></i><span>+60123313552</span></li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+        <script src="js/main.js"></script>
+    </body>
+</html>
