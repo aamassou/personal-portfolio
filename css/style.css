@@ -103,13 +103,15 @@ section#about-section {
     height: 150px;
     padding-top: 100px;
     transition: all 0.5s;
-    margin-left: 1em;
+    margin: 0 1em;
 }
 
 #about-menus {
     margin-top: 10px;
     height: 150px;
     transition: all 0.5s;
+    margin-left: 3px;
+    margin-right: 3px;
 }
 
 nav {
@@ -137,9 +139,12 @@ nav ul li.menu-active:hover {
     background-color: #393e46;
 }
 
+.menu-heading {
+    border-radius: 10px 10px 0 0;
+}
+
 .menu-heading:hover {
     cursor: pointer;
-    /* transform: scale(1.1); */
     background-color: #393e4656;
 }
 
@@ -164,7 +169,11 @@ nav ul li.menu-active:hover {
     height: 220px;
     position: relative;
     justify-content: space-around;
-    /* border-radius: 10px; */
+    border-radius: 10px;
+}
+
+#interests ul{
+    border-radius: 0 10px 10px 10px;
 }
 
 .sub-menu ul li {
@@ -176,9 +185,8 @@ nav ul li.menu-active:hover {
 
 #exit-menu {
     position: absolute;
-    top: 105%;
-    left: 300px;
-    /* left: 42%; */
+    top: 108%;
+    left: 295px;
     font-size: 20px;
     pointer-events: all;
     z-index: 3;
@@ -207,7 +215,6 @@ section#slider-section {
 
 #slider {
     width: 100%;
-    background-color: red;
     white-space: nowrap;
     font-size: 0;
     transition: all 0.7s;
@@ -298,7 +305,6 @@ section#slider-section {
 div#work {
     background-color: #393e46;
     color: #eeeeee;
-    /* margin-top: 60px; */
     padding: 80px 0;
 }
 
@@ -350,15 +356,12 @@ hr {
 }
 
 .project-image {
-    /* background-color: blue; */
-    /* border-radius: 50%; */
     text-align: center;
 }
 
 .project-image img {
     width: 128px;
     height: 128px;
-    /* border-radius: 50%; */
 }
 
 img#salammbo {
@@ -420,9 +423,9 @@ section#contact-section {
 #send-button {
     float: right;
     background-color: #393e46;
-    width: 80px;
-    height: 40px;
-    line-height: 40px;
+    width: 60px;
+    height: 30px;
+    line-height: 30px;
     margin-top: 10px;
     transition: all 0.2s;
     font-size: 14px;
@@ -489,15 +492,33 @@ section#contact-section {
         transition: all 0.5s;
         z-index: 1;
         pointer-events: none;
+        border-radius: 0 0 10px 10px;
     }
     
     #mobile-sub-menu li{
         transition: all 0.5s;
         margin: 10px;
+        font-size: 14px;
+    }
+
+    .sub-menu ul {
+        width: 100%;
+    }
+
+    nav ul li {
+        font-size: 12px;
+    }
+
+    .slider-item {
+        background-position: center;
+    }
+
+    .slider-item h4{
+        font-size: 12px;
     }
 
     #contact ul {
-        margin: 20px 10px;
+        margin: 15px 10px;
     }
 
     #contact ul li i{
@@ -506,12 +527,5 @@ section#contact-section {
 
     #contact ul li p {
         font-size: 10px;
-    }
-}
-
-@media (max-width: 400px) {
-    #exit-menu {
-        left: 0;
-        right: 1em;
     }
 }

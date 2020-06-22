@@ -3,6 +3,19 @@ var subMenus = document.getElementsByClassName('sub-menu');
 var menuHeadings = document.getElementsByClassName('menu-heading');
 
 var subMenuShown = false;
+
+function toggleSubMenu(menu) {
+    var heading = document.getElementById(menu+'-menu');
+    console.log(heading.classList.contains("menu-active"))
+    if(heading.classList.contains("menu-active")) {
+        hideSubMenu()
+    }
+
+    else {
+        showSubMenu(menu)
+    }
+}
+
 function showSubMenu(menu) {
     var about = document.getElementById("about-text");
     
@@ -25,9 +38,9 @@ function showSubMenu(menu) {
     var heading = document.getElementById(menu+'-menu');
     heading.classList.add('menu-active');
 
-    setTimeout(function() {
-        document.getElementById('exit-menu').style.opacity = 1;
-    },500);
+    // setTimeout(function() {
+    //     document.getElementById('exit-menu').style.opacity = 1;
+    // },500);
     
     if(mobileMenuShown) {
         showHeaderMenu();
@@ -52,7 +65,7 @@ function hideSubMenu() {
             menuHeadings[i].classList.remove('menu-active')
         }
 
-    document.getElementById('exit-menu').style.opacity = 0;
+    // document.getElementById('exit-menu').style.opacity = 0;
     subMenuShown = false;
     }
 
