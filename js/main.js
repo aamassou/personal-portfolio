@@ -23,14 +23,16 @@ function showSubMenu(menu) {
     var heading = document.getElementById(menu+'-menu');
     heading.classList.add('menu-active');
 
-    setTimeout(2000);
-    document.getElementById('exit-menu').style.opacity = 1;
+    setTimeout(function() {
+        document.getElementById('exit-menu').style.opacity = 1;
+    },500);
+    
 }
 
 function hideSubMenu() {
     var about = document.getElementById("about-text");
     about.style.transform = "translate(0, 0)"
-
+    
     about.querySelector('h3').style.opacity = 1;
     about.querySelector('h5').style.opacity = 1;
     
@@ -41,7 +43,10 @@ function hideSubMenu() {
     for(var i=0; i<menuHeadings.length;i++) {
             menuHeadings[i].classList.remove('menu-active')
         }
-}
+
+    document.getElementById('exit-menu').style.opacity = 0;
+
+    }
 
 function slideChange(val) {
     sPos += val;
@@ -72,4 +77,14 @@ function updateNav() {
 
     var i = (sPos/-100);
     navBars[i].classList.add('nav-active');
+}
+
+function sendMsg() {
+    var nameInput = document.getElementById("name");
+    var emailInput = document.getElementById("email");
+    var msgInput = document.getElementById("message");
+
+    nameInput.value = "";
+    emailInput.value = "";
+    msgInput.value = "";
 }

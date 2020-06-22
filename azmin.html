@@ -17,11 +17,12 @@
                         <h1>Azmin Massoumi</h1>
                         <h5>Software Engineer (Machine Learning)</h5>
                     </div>
-                        <ul>
-                            <li><a href="#about">about me</a> </li>
-                            <li><a href="#work">work</a></li>
-                            <li><a href="#contact">contact</a></li>
-                        </ul>
+                    <i class="fa fa-bars" aria-hidden="true"></i>
+                    <ul>
+                        <li><a href="#about">about me</a> </li>
+                        <li><a href="#work">work</a></li>
+                        <li><a href="#contact">contact</a></li>
+                    </ul>
                 </section>
             </header>
 
@@ -79,25 +80,27 @@
                 </section>
 
                 <section id="slider-section">
-                    <div id="slider">
-                        <div class="slider-item first">
-                            <h4>grew up in Kuala Lumpur, Malaysia</h4>
+                    <div id="slider-container">
+                        <div id="slider">
+                            <div class="slider-item first">
+                                <h4>grew up in Kuala Lumpur, Malaysia</h4>
+                            </div>
+                            <div class="slider-item second">
+                                <h4>studied in San Diego, California</h4>
+                            </div>
+                            <div class="slider-item third">
+                                <h4>spent 6 months on exchange in Lund, Sweden</h4>
+                            </div>
                         </div>
-                        <div class="slider-item second">
-                            <h4>studied in San Diego, California</h4>
-                        </div>
-                        <div class="slider-item third">
-                            <h4>spent 6 months on exchange in Lund, Sweden</h4>
-                        </div>
-                    </div>
+                        <div class="btn right" onclick="slideChange(-100)">&gt;</div>
+                        <div class="btn left" onclick="slideChange(100)">&lt;</div>
 
-                    <div class="btn right" onclick="slideChange(-100)">&gt;</div>
-                    <div class="btn left" onclick="slideChange(100)">&lt;</div>
 
-                    <div id="quick-bar">
-                        <div class="quick-nav nav-active" onclick="jumpSlide(0)"></div>
-                        <div class="quick-nav" onclick="jumpSlide(-100)"></div>
-                        <div class="quick-nav" onclick="jumpSlide(-200)"></div>
+                        <div id="quick-bar">
+                            <div class="quick-nav nav-active" onclick="jumpSlide(0)"></div>
+                            <div class="quick-nav" onclick="jumpSlide(-100)"></div>
+                            <div class="quick-nav" onclick="jumpSlide(-200)"></div>
+                        </div>
                     </div>
                 </section>
             </div>
@@ -162,6 +165,7 @@
                             <input type="email" placeholder="Email" id="email">
                         </div>
                         <input type="text" placeholder="Message" id="message">
+                        <div id="send-button" onclick="sendMsg()">Send</div>
                     </div>
                     <ul>
                         <a href="mailto:azmin.massoumi@gmail.com"><li><i class="fa fa-envelope-o" aria-hidden="true"></i> azmin.massoumi@gmail.com</li></a>
