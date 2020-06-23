@@ -182,6 +182,10 @@ nav ul li.menu-active:hover {
     color: #eeeeee;
 }
 
+.sub-menu ul li i {
+    margin-right: 10px;
+}
+
 
 #exit-menu {
     position: absolute;
@@ -463,9 +467,6 @@ section#contact-section {
 }
 
 @media (max-width: 500px) {
-    section {
-        width: 100%;
-    }
 
     #bars {
         opacity: 1;
@@ -501,8 +502,24 @@ section#contact-section {
         font-size: 14px;
     }
 
+    nav ul {
+        text-align: center;
+        margin: auto;
+        /* width:90%; */
+    }
+
     .sub-menu ul {
-        width: 100%;
+        /* width: 100%; */
+        /* margin: 0 1em; */
+        margin: auto;
+        text-align: center;
+        /* left: 50%;
+        margin-left: -160px;
+        width: auto; */
+    }
+
+    #interests ul {
+        border-radius: 10px;
     }
 
     nav ul li {
@@ -515,6 +532,37 @@ section#contact-section {
 
     .slider-item h4{
         font-size: 12px;
+    }
+
+    #experience {
+        flex-direction: column;
+    }
+
+    .experience-item {
+        width: 100%;
+    }
+
+    section#work-section {
+        margin: 0 1em;
+    }
+
+    .project-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        /* margin: 0 1em; */
+    }
+
+    #reversi-text {
+        padding-top: 0;
+    }
+
+    #name-email {
+        flex-direction: column;
+    }
+
+    #name-email input {
+        width: 100%;
     }
 
     #contact ul {

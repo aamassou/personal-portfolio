@@ -6,7 +6,6 @@ var subMenuShown = false;
 
 function toggleSubMenu(menu) {
     var heading = document.getElementById(menu+'-menu');
-    console.log(heading.classList.contains("menu-active"))
     if(heading.classList.contains("menu-active")) {
         hideSubMenu()
     }

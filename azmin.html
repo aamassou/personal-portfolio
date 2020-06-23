@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css"> 
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
             
         <link rel="stylesheet" href="css/style.css">
@@ -46,11 +47,11 @@
                                     <div class="sub-menu" id="interests">
                                         
                                         <ul>
-                                            <li>Software Engineering</li>
-                                            <li>Data Science and Data Analytics</li>
-                                            <li>Football (Glory Glory Man United)</li>
-                                            <li>Sports and Exercise</li>
-                                            <li>Video Games</li>
+                                            <li><i class="fas fa-code"></i>Software Engineering</li>
+                                            <li><i class="fas fa-chart-line"></i>Data Science and Data Analytics</li>
+                                            <li><i class="fas fa-futbol"></i>Football (Glory Glory Man United)</li>
+                                            <li><i class="fas fa-running"></i>Sports and Exercise</li>
+                                            <li><i class="fas fa-gamepad"></i>Video Games</li>
                                         </ul>
                                     </div>
                                 </li>
@@ -67,10 +68,10 @@
                                 <li onclick="toggleSubMenu('languages')" id="languages-menu" class="menu-heading">Languages
                                     <div class="sub-menu" id="languages">
                                         <ul>
-                                            <li>Python</li>
-                                            <li>HTML</li>
-                                            <li>CSS</li>
-                                            <li>JavaScript</li>
+                                            <li><i class="fab fa-python"></i>Python</li>
+                                            <li><i class="fab fa-html5"></i>HTML</li>
+                                            <li><i class="fab fa-css3-alt"></i>CSS</li>
+                                            <li><i class="fab fa-js-square"></i>JavaScript</li>
                                             <hr>
                                             <li>English</li>
                                             <li>Malay</li>
@@ -79,7 +80,6 @@
                                     </div>
                                 </li>
                             </ul>
-                            <!-- <i class="fa fa-times" aria-hidden="true" onclick="hideSubMenu()" id="exit-menu"></i> -->
                         </nav>
                     </div>
                 </section>
@@ -112,7 +112,6 @@
             
             <div id="work">
                 <section id="work-section">
-                    <!-- <hr> -->
                     <h2>Work</h2>
                     <h3>experience</h3>
                     <div id="experience">
@@ -149,9 +148,9 @@
                         </div>
                         <div class="project-item">
                             <div class="project-image">
-                                <img src="images/reversi.png" alt="reversi">
+                                <img src="images/reversi.png" alt="reversi" id="reversi">
                             </div>
-                            <div class="project-text">
+                            <div class="project-text" id="reversi-text">
                                 <h4>Reversi AI</h4>
                                 <p>Created a command-line implementation of the Reversi board game, with built in AI to enable gameplay between user and program, with differing difficulties.</p>
                             </div>
