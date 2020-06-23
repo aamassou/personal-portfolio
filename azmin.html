@@ -3,7 +3,7 @@
         <title>Azmin Massoumi</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Hind:wght@300;400;600;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css"> 
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
             
@@ -49,7 +49,7 @@
                                         <ul>
                                             <li><i class="fas fa-code"></i>Software Engineering</li>
                                             <li><i class="fas fa-chart-line"></i>Data Science and Data Analytics</li>
-                                            <li><i class="fas fa-futbol"></i>Football (Glory Glory Man United)</li>
+                                            <li><i class="fas fa-futbol"></i>Football <span>(Glory Glory Man United)</span></li>
                                             <li><i class="fas fa-running"></i>Sports and Exercise</li>
                                             <li><i class="fas fa-gamepad"></i>Video Games</li>
                                         </ul>
@@ -171,7 +171,8 @@
 
                     <h3>resume</h3>
                     <div id="resume">
-                        <a href="pdf/Resume_AzminMassoumi.pdf"><img src="images/Resume_AzminMassoumi.jpg" alt="resume"></a>
+                        <img src="images/Resume_AzminMassoumi.jpg" alt="resume" onclick="showModal()">
+                        <h6 onclick="showModal()">Click to view</h6>
 
                         <a href="pdf/Resume_AzminMassoumi.pdf"><p>Download Resume</p></a>
                     </div>
@@ -187,7 +188,8 @@
                             <input type="text" placeholder="Name" id="name">
                             <input type="email" placeholder="Email" id="email">
                         </div>
-                        <input type="text" placeholder="Message" id="message">
+                        <!-- <input type="text" placeholder="Message" id="message"> -->
+                        <textarea name="message" id="message" placeholder="Message"></textarea>
                         <div id="send-button" onclick="sendMsg()">Send</div>
                     </div>
                     <ul>
@@ -201,6 +203,9 @@
                     </ul>
                 </section>
             </div>
+        </div>
+        <div id="modal" onclick="hideModal()">
+            <img src="images/Resume_AzminMassoumi.jpg" alt="modalResume" id="modalImg">
         </div>
         <script src="js/main.js"></script>
     </body>

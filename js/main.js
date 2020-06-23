@@ -99,6 +99,15 @@ function updateNav() {
     navBars[i].classList.add('nav-active');
 }
 
+setInterval(function() {
+    sPos -= 100;
+    if(sPos < -200) {
+        sPos = 0;
+    }
+
+    jumpSlide(sPos);
+}, 3000)
+
 function sendMsg() {
     var nameInput = document.getElementById("name");
     var emailInput = document.getElementById("email");
@@ -141,4 +150,16 @@ function showHeaderMenu() {
         document.getElementById("bars").style.opacity = 0;
         mobileMenuShown = true;
     }
+}
+
+function showModal() {
+    document.getElementById("modal").style.display = "flex";
+    document.querySelector("body").style.overflow = "hidden";
+    document.querySelector("header").style.zIndex = 0;
+}
+
+function hideModal() {
+    document.getElementById("modal").style.display = "none";
+    document.querySelector("body").style.overflow = "auto";
+    document.querySelector("header").style.zIndex = 4;
 }

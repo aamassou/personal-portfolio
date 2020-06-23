@@ -10,7 +10,7 @@ html, body {
 }
 
 #container {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Hind', sans-serif;
 }
 
 
@@ -19,6 +19,7 @@ section {
     max-width: 900px;
     height: inherit;
     margin: auto;
+    padding: 0 1em;
 }
 
 section#head {
@@ -176,10 +177,18 @@ nav ul li.menu-active:hover {
     border-radius: 0 10px 10px 10px;
 }
 
+#interests span {
+    color: red;
+}
+
 .sub-menu ul li {
     margin: 5px 0;
     padding: 0;
     color: #eeeeee;
+}
+
+#languages ul li {
+    margin: 2px 0;
 }
 
 .sub-menu ul li i {
@@ -213,7 +222,7 @@ section#slider-section {
     position: relative;
     margin-top: 20px;
     overflow: hidden;
-    outline: 7px solid #222831;
+    border: 7px solid #222831;
     height: 400px;
 }
 
@@ -229,6 +238,7 @@ section#slider-section {
     height: 100%;
     display: inline-block;
     font-size: 14px;
+    background-position: center;
 }
 
 .slider-item h4 {
@@ -236,7 +246,7 @@ section#slider-section {
     opacity: 0.8;
     text-shadow: 0px 0px 3px #222831;
     margin-right: 5px;
-    font-size: 18px;
+    font-size: 15px;
 }
 
 .first {
@@ -407,8 +417,14 @@ img#location {
     /* width: 70%; */
     height: 600px;
     /* width: auto; */
-    margin: 20px 0;
+    margin-top: 20px;
     box-shadow: 5px 5px 10px #222831;
+}
+
+#resume h6 {
+    margin-top: 5px;
+    margin-bottom: 20px;
+    color: #00adb5;
 }
 
 #resume a {
@@ -422,6 +438,35 @@ img#location {
 
 #resume p:hover {
     transform: scale(0.9);
+}
+
+#modal {
+    width: 100%;
+    height: 100%;
+    background-color: #222831b8;
+    position: fixed;
+    top:0;
+    left:0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+}
+
+@keyframes modalSlideIn {
+    from {
+        transform: translateY(100%);
+    }
+    
+    to {
+        transform: translateY(0);
+    }
+}
+
+#modalImg{
+    animation: modalSlideIn 0.5s;
+    max-height: 95%;
+    max-width: 100%;
 }
 
 #contact {
@@ -454,6 +499,7 @@ section#contact-section {
 
 #name-email input {
     width: 50%;
+    font-size: 12px;
 }
 
 #name {
@@ -462,6 +508,12 @@ section#contact-section {
 
 #message {
     width: 100%;
+    height: 100px;
+    margin-top: 10px;
+    font-family: 'Hind', sans-serif;
+    padding: 2px;
+    font-size: 12px;
+    resize: none;
 }
 
 #send-button {
@@ -572,7 +624,7 @@ section#contact-section {
     }
 
     .slider-item h4{
-        font-size: 12px;
+        font-size: 11px;
     }
 
     div#work {
