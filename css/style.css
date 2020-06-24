@@ -43,7 +43,7 @@ header {
     display: none;
 }
 
-#bars, #times {
+#mobile-show, #mobile-hide {
     display: none;
     opacity: 0;
     position: absolute;
@@ -345,6 +345,7 @@ section#work-section h3 {
 .experience-item {
     width: 30%;
     margin: 20px 0;
+    opacity: 0;
 }
 
 .experience-item h5 {
@@ -355,6 +356,18 @@ section#work-section h3 {
 .experience-item p {
     font-size: 14px;
     color: #00acb584;
+}
+
+@keyframes fadeInExperience {
+    from {
+        transform: translate(200px, 0);
+        opacity: 0;
+    }
+
+    to {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
 }
 
 hr {
@@ -368,6 +381,7 @@ hr {
 .project-item {
     display: flex;
     margin-top: 20px;
+    opacity: 0;
 }
 
 .project-image {
@@ -407,6 +421,18 @@ img#location {
 .project-text a {
     color: #00adb5;
     font-size: 16px;
+}
+
+@keyframes fadeInProject {
+    from {
+        transform: translate(0, 200px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
 }
 
 #resume {
@@ -560,11 +586,11 @@ section#contact-section {
 
 @media (max-width: 500px) {
 
-    #bars {
+    #mobile-show {
         opacity: 1;
     }
 
-    #bars, #times {
+    #mobile-show, #mobile-hide {
         transition: all 0.5s;
         display: block;
     }

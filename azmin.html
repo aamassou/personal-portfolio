@@ -28,8 +28,8 @@
                         <li><a href="#work">work</a></li>
                         <li><a href="#contact">contact</a></li>
                     </ul>
-                    <i class="fa fa-bars" aria-hidden="true" onclick="showHeaderMenu()" id="bars"></i>
-                    <i class="fa fa-times" aria-hidden="true" onclick="showHeaderMenu()" id="times"></i>
+                    <i class="fa fa-bars" aria-hidden="true" onclick="showHeaderMenu()" id="mobile-show"></i>
+                    <i class="fa fa-times" aria-hidden="true" onclick="showHeaderMenu()" id="mobile-hide"></i>
                 </section>
             </header>
 
@@ -116,17 +116,17 @@
                     <h3>experience</h3>
                     <div id="experience">
 
-                        <div class="experience-item">
+                        <div class="experience-item" id="expOne">
                             <h5>Invoke</h5>
                             <p>Jan 2020 - Present</p>
                             <p>Software Engineer (Machine Learning)</p>
                         </div>
-                        <div class="experience-item">
+                        <div class="experience-item" id="expTwo">
                             <h5>Accenture</h5>
                             <p>Jul 2018 - Sep 2018</p>
                             <p>Campaign Management System Intern</p>
                         </div>
-                        <div class="experience-item">
+                        <div class="experience-item" id="expThree">
                             <h5>Mesiniaga</h5>
                             <p>Jul 2017 - Aug 2017</p>
                             <p>Network Business Unit Intern</p>
@@ -137,7 +137,7 @@
                     
                     <h3>projects</h3>
                     <div id="projects">
-                        <div class="project-item">
+                        <div class="project-item" id="projOne">
                             <div class="project-image">
                                 <img src="images/salammbo.png" alt="salammbo" id="salammbo">
                             </div>
@@ -146,17 +146,17 @@
                                 <p>Built and implemented linear and logistic regression models to test on datasets corresponding to letter counts in French and English versions of the 'Salammbo' novel</p>
                             </div>
                         </div>
-                        <div class="project-item">
+                        <div class="project-item" id="projTwo">
                             <div class="project-image">
                                 <img src="images/location.png" alt="location" id="location">
                             </div>
-                            <div class="project-text" id="reversi-text">
+                            <div class="project-text" id="location-text">
                                 <h4>Location Analysis for Restaurant Opening</h4>
                                 <p>Performed location analysis using Foursquare API location data and Python machine learning packages for k-means clustering to find the ideal location in San Diego, California to open a Malaysian restaurant.</p>
                                 <p><a href="https://github.com/aamassou/ibm-capstone">Link</a></p>
                             </div>
                         </div>
-                        <div class="project-item">
+                        <div class="project-item" id="projThree">
                             <div class="project-image">
                                 <img src="images/reversi.png" alt="reversi" id="reversi">
                             </div>
