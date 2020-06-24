@@ -89,6 +89,9 @@ header div h5 {
 section#about-section {
     padding-top: 45px;
     position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 #about h3 {
@@ -98,6 +101,14 @@ section#about-section {
 
 #about h3, #about h5 {
     transition: all 0.5s;
+}
+
+img#face {
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    margin-right: 50px;
+    border-radius: 50%;
 }
 
 #about-text {
@@ -326,7 +337,6 @@ section#work-section h1, section#contact-section h1 {
     text-align: center;
     font-size: 30px;
     font-weight: 600;
-    margin-bottom: 15px;
     letter-spacing: 1px;
 }
 
@@ -334,6 +344,44 @@ section#work-section h3 {
     font-weight: 600;
     font-size: 25px;
     letter-spacing: 1px;
+}
+
+.head-underline {
+    width: 30px;
+    height: 3px;
+    background-color: #eeeeee;
+    /* text-align: center; */
+    margin: auto;
+    margin-bottom: 15px;
+    opacity: 0;
+}
+
+#work-heading, #experience-heading, #projects-heading, #resume-heading, #contact-heading {
+    opacity: 0;
+}
+
+@keyframes slideInWork {
+    from {
+        opacity: 0;
+        transform: translate(100px, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(0,0);
+    }
+}
+
+@keyframes slideInExpHeading {
+    from {
+        opacity: 0;
+        transform: translate(-100px, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(0,0);
+    }
 }
 
 #experience {
@@ -440,9 +488,7 @@ img#location {
 }
 
 #resume img {
-    /* width: 70%; */
     height: 600px;
-    /* width: auto; */
     margin-top: 20px;
     box-shadow: 5px 5px 10px #222831;
 }
@@ -605,7 +651,7 @@ section#contact-section {
         position: absolute;
         right: 0;
         top: 60px;
-        background-color: #222831;
+        background-color: #222831d2;
         color: #eeeeee;
         width: 100px;
         transition: all 0.5s;
@@ -620,10 +666,24 @@ section#contact-section {
         font-size: 14px;
     }
 
+    #about-text {
+        padding-top: 0;
+    }
+
+    section#about-section {
+        flex-direction: column-reverse;
+    }
+
+    img#face {
+        width: 125px;
+        height: 125px;
+        margin-right: 0;
+        margin-top: 75px;
+    }
+
     nav ul {
         text-align: center;
         margin: auto;
-        /* width:90%; */
     }
 
     .sub-menu ul {
@@ -673,7 +733,6 @@ section#contact-section {
         flex-direction: column;
         align-items: center;
         text-align: center;
-        /* margin: 0 1em; */
     }
 
     #reversi-text {

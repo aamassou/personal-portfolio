@@ -14,7 +14,6 @@
             <header>
                 <section id="head">
                     <div>
-                        <img src="" alt="">
                         <h1>Azmin Massoumi</h1>
                         <h5>Software Engineer (Machine Learning)</h5>
                     </div>
@@ -36,52 +35,56 @@
             <div id="about">
                 <section id="about-section">
 
-                    <div id="about-text">
-                        <h3>Azmin Massoumi</h3>
-                        <h5>Kuala Lumpur, Malaysia</h5>
+                    <div id="about-main">
+                        <div id="about-text">
+                            <h3>Azmin Massoumi</h3>
+                            <h5>Kuala Lumpur, Malaysia</h5>
+                        </div>
+                        <div id="about-menus">
+                            <nav>
+                                <ul>
+                                    <li onclick="toggleSubMenu('interests')" id="interests-menu" class="menu-heading">Interests
+                                        <div class="sub-menu" id="interests">
+                                            
+                                            <ul>
+                                                <li><i class="fas fa-code"></i>Software Engineering</li>
+                                                <li><i class="fas fa-chart-line"></i>Data Science and Data Analytics</li>
+                                                <li><i class="fas fa-futbol"></i>Football <span>(Glory Glory Man United)</span></li>
+                                                <li><i class="fas fa-running"></i>Sports and Exercise</li>
+                                                <li><i class="fas fa-gamepad"></i>Video Games</li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li onclick="toggleSubMenu('education')" id="education-menu" class="menu-heading">Education
+                                        <div class="sub-menu" id="education">
+                                            <ul>
+                                                <li>A-Levels, HELP International School</li>
+                                                <li>B.S. Mathematics-Computer Science, University of California San Diego</li>
+                                                <li>UCEAP Exchange Program, Lund University, Sweden</li>
+                                                <li>IBM Professional Data Science Certification</li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li onclick="toggleSubMenu('languages')" id="languages-menu" class="menu-heading">Languages
+                                        <div class="sub-menu" id="languages">
+                                            <ul>
+                                                <li><i class="fab fa-python"></i>Python</li>
+                                                <li><i class="fab fa-html5"></i>HTML</li>
+                                                <li><i class="fab fa-css3-alt"></i>CSS</li>
+                                                <li><i class="fab fa-js-square"></i>JavaScript</li>
+                                                <hr>
+                                                <li>English</li>
+                                                <li>Malay</li>
+                                                <li>Spanish</li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
                     </div>
-                    <div id="about-menus">
-                        <nav>
-                            <ul>
-                                <li onclick="toggleSubMenu('interests')" id="interests-menu" class="menu-heading">Interests
-                                    <div class="sub-menu" id="interests">
-                                        
-                                        <ul>
-                                            <li><i class="fas fa-code"></i>Software Engineering</li>
-                                            <li><i class="fas fa-chart-line"></i>Data Science and Data Analytics</li>
-                                            <li><i class="fas fa-futbol"></i>Football <span>(Glory Glory Man United)</span></li>
-                                            <li><i class="fas fa-running"></i>Sports and Exercise</li>
-                                            <li><i class="fas fa-gamepad"></i>Video Games</li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li onclick="toggleSubMenu('education')" id="education-menu" class="menu-heading">Education
-                                    <div class="sub-menu" id="education">
-                                        <ul>
-                                            <li>A-Levels, HELP International School</li>
-                                            <li>B.S. Mathematics-Computer Science, University of California San Diego</li>
-                                            <li>UCEAP Exchange Program, Lund University, Sweden</li>
-                                            <li>IBM Professional Data Science Certification</li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li onclick="toggleSubMenu('languages')" id="languages-menu" class="menu-heading">Languages
-                                    <div class="sub-menu" id="languages">
-                                        <ul>
-                                            <li><i class="fab fa-python"></i>Python</li>
-                                            <li><i class="fab fa-html5"></i>HTML</li>
-                                            <li><i class="fab fa-css3-alt"></i>CSS</li>
-                                            <li><i class="fab fa-js-square"></i>JavaScript</li>
-                                            <hr>
-                                            <li>English</li>
-                                            <li>Malay</li>
-                                            <li>Spanish</li>
-                                        </ul>
-                                    </div>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
+                    <img src="images/face.jpeg" alt="" id="face">
+                        
                 </section>
 
                 <section id="slider-section">
@@ -112,8 +115,9 @@
             
             <div id="work">
                 <section id="work-section">
-                    <h1>Work</h1>
-                    <h3>experience</h3>
+                    <h1 id="work-heading">Work</h1>
+                    <div class="head-underline" id="work-underline"></div>
+                    <h3 id="experience-heading">experience</h3>
                     <div id="experience">
 
                         <div class="experience-item" id="expOne">
@@ -135,7 +139,7 @@
 
                     <hr id="work-hr">
                     
-                    <h3>projects</h3>
+                    <h3 id="projects-heading">projects</h3>
                     <div id="projects">
                         <div class="project-item" id="projOne">
                             <div class="project-image">
@@ -169,7 +173,7 @@
 
                     <hr id="work-hr">
 
-                    <h3>resume</h3>
+                    <h3 id="resume-heading">resume</h3>
                     <div id="resume">
                         <img src="images/Resume_AzminMassoumi.jpg" alt="resume" onclick="showModal()">
                         <h6 onclick="showModal()">Click to view</h6>
@@ -181,24 +185,26 @@
 
             <div id="contact">
                 <section id="contact-section">
-                    <h1>Contact Me</h1>
+                    <h1 id="contact-heading">Contact</h1>
+                    <div class="head-underline" id="contact-underline"></div>
 
                     <div id="contact-form">
                         <div id="name-email">
                             <input type="text" placeholder="Name" id="name">
                             <input type="email" placeholder="Email" id="email">
                         </div>
-                        <!-- <input type="text" placeholder="Message" id="message"> -->
+
                         <textarea name="message" id="message" placeholder="Message"></textarea>
+
                         <div id="send-button" onclick="sendMsg()">Send</div>
                     </div>
                     <ul>
-                        <a href="mailto:azmin.massoumi@gmail.com"><li><i class="fa fa-envelope-o" aria-hidden="true"></i><p>azmin.massoumi@gmail.com</p></li></a>
                         <a href="https://www.linkedin.com/in/azmin.massoumi"><li><i class="fa fa-linkedin" aria-hidden="true"></i><p>azmin.massoumi</p></li></a>
+                        <a href="https://www.github.com/aamassou"><li><i class="fa fa-github" aria-hidden="true"></i><p>aamassou</p></li></a>
+                        <a href="https://www.instagram.com"><li><i class="fa fa-instagram" aria-hidden="true"></i><p>azminmassoumi</p></li></a>
                     </ul>
                     <ul>
-                        <a href="https://www.instagram.com"><li><i class="fa fa-instagram" aria-hidden="true"></i><p>azminmassoumi</p></li></a>
-                        <a href="https://www.github.com/aamassou"><li><i class="fa fa-github" aria-hidden="true"></i><p>aamassou</p></li></a>
+                        <a href="mailto:azmin.massoumi@gmail.com"><li><i class="fa fa-envelope-o" aria-hidden="true"></i><p>azmin.massoumi@gmail.com</p></li></a>
                         <li><i class="fa fa-whatsapp" aria-hidden="true"></i><span><p>+60123313552</p></span></li>
                     </ul>
                 </section>

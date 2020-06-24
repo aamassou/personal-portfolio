@@ -105,6 +105,16 @@ setInterval(function() {
     jumpSlide(sPos);
 }, 3000)
 
+var workHeading = document.getElementById("work-heading");
+var contactHeading = document.getElementById("contact-heading");
+
+var workUnderline = document.getElementById("work-underline");
+var contactUnderline = document.getElementById("contact-underline");
+
+var experienceHeading = document.getElementById("experience-heading");
+var projectsHeading = document.getElementById("projects-heading");
+var resumeHeading = document.getElementById("resume-heading");
+
 var expOne = document.getElementById("expOne");
 var expTwo = document.getElementById("expTwo");
 var expThree = document.getElementById("expThree");
@@ -113,37 +123,71 @@ var projOne = document.getElementById("projOne");
 var projTwo = document.getElementById("projTwo");
 var projThree = document.getElementById("projThree");
 window.addEventListener('scroll', function() {
-    if(window.scrollY >= (expOne.offsetTop) - 700) {
+
+    if(window.scrollY >= (workHeading.offsetTop) - 600) {
+        workHeading.style.opacity = 1;
+        workHeading.style.animation = 'slideInWork 0.5s';
+
+        setTimeout(function() {
+            workUnderline.style.opacity = 1;
+            workUnderline.style.animation = 'slideInWork 0.5s'
+        }, 500);
+    }
+
+    if(window.scrollY >= (contactHeading.offsetTop) - 600) {
+        contactHeading.style.opacity = 1;
+        contactHeading.style.animation = 'slideInWork 0.5s';
+
+        setTimeout(function() {
+            contactUnderline.style.opacity = 1;
+            contactUnderline.style.animation = 'slideInWork 0.5s'
+        }, 500);
+    }
+
+    if(window.scrollY >= (experienceHeading.offsetTop) - 600) {
+        experienceHeading.style.opacity = 1;
+        experienceHeading.style.animation = 'slideInExpHeading 0.5s';
+    }
+
+    if(window.scrollY >= (projectsHeading.offsetTop) - 600) {
+        projectsHeading.style.opacity = 1;
+        projectsHeading.style.animation = 'slideInExpHeading 0.5s';
+    }
+
+    if(window.scrollY >= (resumeHeading.offsetTop) - 600) {
+        resumeHeading.style.opacity = 1;
+        resumeHeading.style.animation = 'slideInExpHeading 0.5s';
+    }
+
+    if(window.scrollY >= (expOne.offsetTop) - 600) {
         expOne.style.opacity = 1;
-        expOne.style.animation = 'fadeInExperience 2s';
+        expOne.style.animation = 'fadeInExperience 1.5s';
 
         setTimeout(function() {
             expTwo.style.opacity = 1;
-            expTwo.style.animation = 'fadeInExperience 2s';
-            // expTwo.style.animationDelay = '1s';
+            expTwo.style.animation = 'fadeInExperience 1.5s';
         }, 750)
         
         setTimeout(function() {
             expThree.style.opacity = 1;
-            expThree.style.animation = 'fadeInExperience 2s';
-            // expThree.style.animationDelay = '2s';
+            expThree.style.animation = 'fadeInExperience 1.5s';
         },1500);
         
     }
 
-    if(window.scrollY >= (projOne.offsetTop) - 700) {
+    if(window.scrollY >= (projOne.offsetTop) - 600) {
         projOne.style.opacity = 1;
-        projOne.style.animation = 'fadeInProject 2s';
+        projOne.style.animation = 'fadeInProject 1.2s';
     }
 
-    if(window.scrollY >= (projTwo.offsetTop) - 700) {
+    if(window.scrollY >= (projTwo.offsetTop) - 600) {
         projTwo.style.opacity = 1;
-        projTwo.style.animation = 'fadeInProject 2s';
+        projTwo.style.animation = 'fadeInProject 1.2s';
     }
 
-    if(window.scrollY >= (projThree.offsetTop) - 700) {
+    if(window.scrollY >= (projThree.offsetTop) - 600) {
         projThree.style.opacity = 1;
-        projThree.style.animation = 'fadeInProject 2s';
+        projThree.style.animation = 'fadeInProject 1.2s';
     }
 });
 
