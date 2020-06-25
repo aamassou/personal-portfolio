@@ -119,6 +119,7 @@ var contactUnderline = document.getElementById("contact-underline");
 var experienceHeading = document.getElementById("experience-heading");
 var projectsHeading = document.getElementById("projects-heading");
 var resumeHeading = document.getElementById("resume-heading");
+var resumeImg = document.getElementById("resume").querySelector("img");
 
 var expOne = document.getElementById("expOne");
 var expTwo = document.getElementById("expTwo");
@@ -139,31 +140,11 @@ window.addEventListener('scroll', function() {
         }, 500);
     }
 
-    if(window.scrollY >= (contactHeading.offsetTop) - 600) {
-        contactHeading.style.opacity = 1;
-        contactHeading.style.animation = 'slideInWork 0.5s';
-
-        setTimeout(function() {
-            contactUnderline.style.opacity = 1;
-            contactUnderline.style.animation = 'slideInWork 0.5s'
-        }, 500);
-    }
-
     if(window.scrollY >= (experienceHeading.offsetTop) - 600) {
         experienceHeading.style.opacity = 1;
         experienceHeading.style.animation = 'slideInExpHeading 0.5s';
     }
-
-    if(window.scrollY >= (projectsHeading.offsetTop) - 600) {
-        projectsHeading.style.opacity = 1;
-        projectsHeading.style.animation = 'slideInExpHeading 0.5s';
-    }
-
-    if(window.scrollY >= (resumeHeading.offsetTop) - 600) {
-        resumeHeading.style.opacity = 1;
-        resumeHeading.style.animation = 'slideInExpHeading 0.5s';
-    }
-
+    
     if(window.scrollY >= (expOne.offsetTop) - 600) {
         expOne.style.opacity = 1;
         expOne.style.animation = 'fadeInExperience 1.5s';
@@ -180,6 +161,11 @@ window.addEventListener('scroll', function() {
         
     }
 
+    if(window.scrollY >= (projectsHeading.offsetTop) - 600) {
+        projectsHeading.style.opacity = 1;
+        projectsHeading.style.animation = 'slideInExpHeading 0.5s';
+    }
+
     if(window.scrollY >= (projOne.offsetTop) - 600) {
         projOne.style.opacity = 1;
         projOne.style.animation = 'fadeInProject 1.2s';
@@ -190,17 +176,38 @@ window.addEventListener('scroll', function() {
         projTwo.style.animation = 'fadeInProject 1.2s';
     }
 
+    if(window.scrollY >= (resumeHeading.offsetTop) - 600) {
+        resumeHeading.style.opacity = 1;
+        resumeHeading.style.animation = 'slideInExpHeading 0.5s';
+    }
+
+    if(window.scrollY >= (resumeImg.offsetTop) - 400) {
+        resumeImg.style.opacity = 1;
+    }
+
     if(window.scrollY >= (projThree.offsetTop) - 600) {
         projThree.style.opacity = 1;
         projThree.style.animation = 'fadeInProject 1.2s';
     }
+
+    if(window.scrollY >= (contactHeading.offsetTop) - 600) {
+        contactHeading.style.opacity = 1;
+        contactHeading.style.animation = 'slideInWork 0.5s';
+
+        setTimeout(function() {
+            contactUnderline.style.opacity = 1;
+            contactUnderline.style.animation = 'slideInWork 0.5s'
+        }, 500);
+    }
+
+
 });
 
 
 var mobileMenuShown = false;
 var mobileMenu = document.getElementById("mobile-sub-menu");
 
-function showHeaderMenu() {
+function toggleHeaderMenu() {
     if(subMenuShown) {
         hideSubMenu();
     }

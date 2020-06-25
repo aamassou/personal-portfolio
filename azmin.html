@@ -13,7 +13,7 @@
         <div id="container">
             <header>
                 <section id="head">
-                    <div>
+                    <div id="header-name">
                         <h1>Azmin Massoumi</h1>
                         <h5>Software Engineer (Machine Learning)</h5>
                     </div>
@@ -23,12 +23,12 @@
                         <li><a href="#contact">contact</a></li>
                     </ul>
                     <ul id="mobile-sub-menu">
-                        <li><a href="#about">about me</a> </li>
-                        <li><a href="#work">work</a></li>
-                        <li><a href="#contact">contact</a></li>
+                        <li><a href="#about" onclick="toggleHeaderMenu()">about me</a> </li>
+                        <li><a href="#work" onclick="toggleHeaderMenu()">work</a></li>
+                        <li><a href="#contact" onclick="toggleHeaderMenu()">contact</a></li>
                     </ul>
-                    <i class="fa fa-bars" aria-hidden="true" onclick="showHeaderMenu()" id="mobile-show"></i>
-                    <i class="fa fa-times" aria-hidden="true" onclick="showHeaderMenu()" id="mobile-hide"></i>
+                    <i class="fa fa-bars" aria-hidden="true" onclick="toggleHeaderMenu()" id="mobile-show"></i>
+                    <i class="fa fa-times" aria-hidden="true" onclick="toggleHeaderMenu()" id="mobile-hide"></i>
                 </section>
             </header>
 
@@ -83,8 +83,11 @@
                             </nav>
                         </div>
                     </div>
-                    <img src="images/face.jpeg" alt="" id="face">
-                    <img src="images/face.jpeg" alt="" id="mobile-face">
+
+                    <div id="face-div">
+                        <img src="images/face.jpeg" alt="" id="face">
+                        <img src="images/face.jpeg" alt="" id="mobile-face">
+                    </div>
                         
                 </section>
 
@@ -101,8 +104,8 @@
                                 <h4>spent 6 months on exchange in Lund, Sweden</h4>
                             </div>
                         </div>
-                        <div class="btn right" onclick="slideChange(-100)">&gt;</div>
-                        <div class="btn left" onclick="slideChange(100)">&lt;</div>
+                        <div class="btn right" onclick="slideChange(-100)"><i class="fas fa-chevron-right"></i></div>
+                        <div class="btn left" onclick="slideChange(100)"><i class="fas fa-chevron-left"></i></div>
 
 
                         <div id="quick-bar">
@@ -148,7 +151,7 @@
                             </div>
                             <div class="project-text">
                                 <h4>Machine Learning on Salammbo</h4>
-                                <p>Built and implemented linear and logistic regression models to test on datasets corresponding to letter counts in French and English versions of the 'Salammbo' novel</p>
+                                <p>Built and implemented linear and logistic regression models to test on datasets corresponding to letter counts in French and English versions of the 'Salammbo' novel.</p>
                             </div>
                         </div>
                         <div class="project-item" id="projTwo">
@@ -167,7 +170,7 @@
                             </div>
                             <div class="project-text" id="reversi-text">
                                 <h4>Reversi AI with Alpha-Beta Pruning</h4>
-                                <p>Created a command-line implementation of the Reversi board game, with built in AI to enable gameplay between user and program, with differing difficulties.</p>
+                                <p>Created a command-line implementation of the Reversi board game, with built in AI to enable gameplay between user and program, with differing difficulty levels.</p>
                             </div>
                         </div>
                     </div>
@@ -189,6 +192,8 @@
                     <h1 id="contact-heading">Contact</h1>
                     <div class="head-underline" id="contact-underline"></div>
 
+                    <h4>Want to talk? Get in touch here!</h4>
+
                     <div id="contact-form">
                         <div id="name-email">
                             <input type="text" placeholder="Name" id="name">
@@ -200,13 +205,11 @@
                         <div id="send-button" onclick="sendMsg()">Send</div>
                     </div>
                     <ul>
-                        <a href="https://www.linkedin.com/in/azmin.massoumi"><li><i class="fa fa-linkedin" aria-hidden="true"></i><p>azmin.massoumi</p></li></a>
-                        <a href="https://www.github.com/aamassou"><li><i class="fa fa-github" aria-hidden="true"></i><p>aamassou</p></li></a>
-                        <a href="https://www.instagram.com"><li><i class="fa fa-instagram" aria-hidden="true"></i><p>azminmassoumi</p></li></a>
-                    </ul>
-                    <ul>
-                        <a href="mailto:azmin.massoumi@gmail.com"><li><i class="fa fa-envelope-o" aria-hidden="true"></i><p>azmin.massoumi@gmail.com</p></li></a>
-                        <li><i class="fa fa-whatsapp" aria-hidden="true"></i><span><p>+60123313552</p></span></li>
+                        <a href="https://www.linkedin.com/in/azmin.massoumi"><li><i class="fa fa-linkedin" aria-hidden="true"></i></li></a>
+                        <a href="https://www.github.com/aamassou"><li><i class="fa fa-github" aria-hidden="true"></i></li></a>
+                        <a href="https://www.instagram.com"><li><i class="fa fa-instagram" aria-hidden="true"></i></li></a>
+                        <a href="mailto:azmin.massoumi@gmail.com"><li><i class="fa fa-envelope-o" aria-hidden="true"></i></li></a>
+                        <li><i class="fa fa-whatsapp" aria-hidden="true"></i></li>
                     </ul>
                 </section>
             </div>
