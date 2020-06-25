@@ -2,6 +2,7 @@ var about = document.getElementById("about-text");
 var menuHeadings = document.getElementsByClassName('menu-heading');
 var aboutMenus = document.getElementById("about-menus");
 var subMenus = document.getElementsByClassName('sub-menu');
+var mobileFace = document.getElementById("mobile-face");
 
 var sPos = 0;
 var slider = document.getElementById("slider");
@@ -24,9 +25,11 @@ function showSubMenu(menu) {
     
     about.querySelector('h3').style.opacity = 0;
     about.querySelector('h5').style.opacity = 0;
+    mobileFace.style.opacity = 0;
     
-    about.style.transform = "translate(0, -130px)"
-    aboutMenus.style.transform = "translate(0, -130px)"
+    about.style.transform = "translate(0, -130px)";
+    aboutMenus.style.transform = "translate(0, -130px)";
+    mobileFace.style.transform = "translate(0, -130px)";
     for(let i=0; i<subMenus.length; i++) {
         subMenus[i].style.opacity = 0;
     }
@@ -51,9 +54,11 @@ function showSubMenu(menu) {
 function hideSubMenu() {
     about.style.transform = "translate(0, 0)"
     aboutMenus.style.transform = "translate(0, 0)"
+    mobileFace.style.transform = "translate(0, 0)"
     
     about.querySelector('h3').style.opacity = 1;
     about.querySelector('h5').style.opacity = 1;
+    mobileFace.style.opacity = 1;
     
     for(let i=0; i<subMenus.length; i++) {
         subMenus[i].style.opacity = 0;
